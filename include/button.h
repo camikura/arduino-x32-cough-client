@@ -7,17 +7,17 @@ using namespace std;
 
 #define CHATTERING_THRESHOLD 5
 
-class Button;
+struct Button;
 typedef void (*handler)();
 
 struct Button {
   int pin = PIN_B1;
   vector<int> counter = {0, 0, 0};
 
-  Button();
-
   handler pressed_handler;
   handler released_handler;
+
+  Button();
 
   void scan();
 };

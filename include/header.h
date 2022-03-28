@@ -1,14 +1,11 @@
 #include <Arduino.h>
 #include <button.h>
+#include <led.h>
 #include <oled.h>
-
-#define PIN_LED1 4
 
 Oled oled;
 Button button;
+Led led;
 
 void on_pressed();
 void on_released();
-
-void light_on();
-void light_off();

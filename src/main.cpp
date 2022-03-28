@@ -11,19 +11,20 @@ void setup() {
   button.pressed_handler = on_pressed;
   button.released_handler = on_released;
 
-  pinMode(PIN_LED1, OUTPUT);
-  digitalWrite(PIN_LED1, LOW);
+  led = Led();
 }
 
 void loop() { button.scan(); }
 
 void on_pressed() {
   oled.on_pressed();
-  digitalWrite(PIN_LED1, HIGH);
+
+  led.on();
 }
 
 void on_released() {
   oled.clear();
   // oled.on_released();
-  digitalWrite(PIN_LED1, LOW);
+
+  led.off();
 }
