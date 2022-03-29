@@ -9,3 +9,5 @@ Led led;
 
 void on_pressed();
 void on_released();
+
+void response();
